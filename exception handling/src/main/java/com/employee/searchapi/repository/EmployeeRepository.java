@@ -13,6 +13,9 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     @Query("SELECT e FROM Employee e WHERE e.name LIKE %:searchTerm%")
     List<Employee> searchByName(@Param("searchTerm") String searchTerm);
 
+    @Query("SELECT e from Employee e WHERE e.department Like %:query%")
+    List<Employee> searchByDepartment(@Param("query") String query);
+
 }
 
 

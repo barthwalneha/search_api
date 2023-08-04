@@ -19,4 +19,9 @@ public class EmployeeService {
     public List<Employee> searchEmployeesByName(String searchTerm) {
         return employeeRepository.searchByName(searchTerm);
     }
+
+    public List<Employee> getEmployeesByDepartment(String department) {
+        return employeeRepository.searchByDepartment(department);
+
+    }
 }
